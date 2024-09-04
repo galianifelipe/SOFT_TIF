@@ -18,10 +18,7 @@ def check_location(center):
     return center
 
 def draw(layer, center):
-    # cv2.rectangle(layer, (center[0],center[1]), (image_width, image_height), (0,0,0), thickness=2, lineType=cv2.LINE_AA)
-    cv2.circle(layer, tuple(center), 65, (143,14,143), thickness=2, lineType=cv2.LINE_AA)
     cv2.circle(layer, tuple(center), 70, (255,255,255), thickness=2, lineType=cv2.LINE_AA)
-    cv2.circle(layer, tuple(center), 10, (143,14,143), thickness=-1, lineType=cv2.LINE_AA)
     cv2.circle(layer, tuple(center), 5, (255,255,255), thickness=-1, lineType=cv2.LINE_AA)
     return layer
 
@@ -30,7 +27,9 @@ def process_mouse_event(event,x,y,flags, cntr):
     cv2.line(clone, (5,50), (250,50), (255,255,255), thickness=2, lineType=cv2.LINE_AA)
     cv2.putText(clone, "Scroll ", (10,32), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 2, cv2.LINE_AA)
     if event == cv2.EVENT_LBUTTONDOWN:
-        print((center[1]/10)*(np.pi/12))
+        med=str((center[1]/10)*(np.pi/12))
+        print(med[0]+med[1]+med[2]+med[3]+" cm.")
+        cv2.putText(clone, "MEDICION: " + med[0]+med[1]+med[2]+med[3]+" cm.", (10,700), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255,255,255), 1, lineType=cv2.LINE_AA)
     if event == cv2.EVENT_MOUSEWHEEL:
         if flags > 0:
             cv2.putText(clone, "Scroll Up", (10,32), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 2, cv2.LINE_AA)
@@ -39,10 +38,13 @@ def process_mouse_event(event,x,y,flags, cntr):
             center[1]+=scroll
             cv2.putText(clone, "Scroll Down", (10,32), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 2, cv2.LINE_AA)
     _center = check_location(cntr)
-    cv2.line(clone, (250,50), tuple(_center), (255,255,255), thickness=2, lineType=cv2.LINE_AA)
+    if _center==[550, 0]:
+        st="0,000"
+    else:
+        st=str((_center[1]/10)*(np.pi/12))
     cv2.line(clone, (5,cntr[1]), (image_width-5,cntr[1]), (255,255,255), thickness=2, lineType=cv2.LINE_AA)
     clone = draw(clone, _center)
-    cv2.putText(clone, "Center: " + str(_center), (10,80), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255,255,255), 1, lineType=cv2.LINE_AA)
+    cv2.putText(clone, "MEDIDA: " + st[0]+st[1]+st[2]+st[3]+" cm.", (10,80), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255,255,255), 1, lineType=cv2.LINE_AA)
     cv2.imshow('DOLORIMETRO', clone) 
 
 cv2.imshow('DOLORIMETRO', img)
