@@ -3,6 +3,7 @@ import cv2
 from tkinter import Tk, simpledialog
 from datetime import datetime
 import os
+import winsound
 
 
 
@@ -29,6 +30,7 @@ def process_mouse_event(event,x,y,flags, l):
         print(med[0]+med[1]+med[2]+med[3]+" cm.")
         a=str(med[0]+med[1]+med[2]+med[3]+" cm.")
         medidas.append(a)
+        winsound.Beep(1000, 500)
         cv2.putText(clone, "MEDICION: " + med[0]+med[1]+med[2]+med[3]+" cm.", (10,700), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255,255,255), 1, lineType=cv2.LINE_AA)
     if event == cv2.EVENT_MOUSEWHEEL:
         if flags > 0:
