@@ -173,7 +173,7 @@ if nombre_voluntario is not None:
         if button_number==0:
              file.write("Lugar de Medicion: "+otro+"\n\n")
         else:
-             file.write("Lugar de Medicion: "+lugar+"\n")
+             file.write("Lugar de Medicion: "+lugar+"\n\n")
         for i in range(len(a)):
             file.write("MEDIDA "+str(i+1)+":  "+a[i]+"\n")
         
