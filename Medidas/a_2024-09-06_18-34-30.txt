@@ -1,0 +1,9 @@
+Voluntario: a
+Fecha y Hora: 2024-09-06_18-34-30
+Lugar de Medicion: 
+
+MEDIDA 1:  1.57 cm.
+MEDIDA 2:  3.66 cm.
+MEDIDA 3:  3.66 cm.
+MEDIDA 4:  3.66 cm.
+MEDIDA 5:  3.66 cm.
