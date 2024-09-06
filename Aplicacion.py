@@ -98,22 +98,20 @@ def process_mouse_event(event,x,y,flags, l):
     clone = cv2.imread(l[2])
     cntr=l[0]
     medidas=l[1]
-    cv2.line(clone, (5,50), (250,50), (255,255,255), thickness=2, lineType=cv2.LINE_AA)
-    cv2.putText(clone, "Scroll ", (10,32), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 2, cv2.LINE_AA)
+    cv2.line(clone, (5,50), (250,50), (255,255,255), thickness=2, lineType=cv2.LINE_AA) 
     if event == cv2.EVENT_LBUTTONDOWN:
             med=str((center[1]/10)*(np.pi/12))
-            print(med[0]+med[1]+med[2]+med[3]+" cm.")
             a=str(med[0]+med[1]+med[2]+med[3]+" cm.")
             medidas.append(a)
-            winsound.Beep(1000, 500)
+            winsound.Beep(300, 500)
             cv2.putText(clone, "MEDICION: " + med[0]+med[1]+med[2]+med[3]+" cm.", (10,700), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255,255,255), 1, lineType=cv2.LINE_AA)
     if event == cv2.EVENT_MOUSEWHEEL:
         if flags > 0:
-            cv2.putText(clone, "Scroll Up", (10,32), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 2, cv2.LINE_AA)
+            cv2.putText(clone, "Arriba", (10,32), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 2, cv2.LINE_AA)
             center[1]-=scroll       
         else:
             center[1]+=scroll
-            cv2.putText(clone, "Scroll Down", (10,32), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 2, cv2.LINE_AA)
+            cv2.putText(clone, "Abajo", (10,32), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 2, cv2.LINE_AA)
     _center = check_location(cntr)
     if _center==[550, 0]:
             st="0,000"
@@ -122,7 +120,7 @@ def process_mouse_event(event,x,y,flags, l):
     cv2.line(clone, (5,cntr[1]), (image_width-5,cntr[1]), (255,255,255), thickness=2, lineType=cv2.LINE_AA)
     clone = draw(clone, _center)
     cv2.putText(clone, "MEDIDA: " + st[0]+st[1]+st[2]+st[3]+" cm.", (10,80), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255,255,255), 1, lineType=cv2.LINE_AA)
-    altura=200
+    altura=25
     for i in range (len(medidas)):
             cv2.putText(clone, "MEDIDA "+str(i+1)+": "+ medidas[i][0]+medidas[i][1]+medidas[i][2]+medidas[i][3]+" cm.", (700,altura), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255,255,255), 1, lineType=cv2.LINE_AA)
             altura+=25
@@ -130,7 +128,13 @@ def process_mouse_event(event,x,y,flags, l):
 
 
 
-# Llamar a la función para obtener los datos
+
+
+
+
+
+
+
 nombre_voluntario, button_number, otro = obtener_datos_gui()
 optn=["Occipucio", "Trapecio", "Supraespinoso", "Glúteo", "Trocánter mayor", "Cervical inferior", "Segunda costilla", "Epicóndilo lateral", "Rodilla"]
 
