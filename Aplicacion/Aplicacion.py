@@ -286,3 +286,9 @@ if nombre_voluntario is not None:
 
 else:
     print("No se completó el registro.")
+
+
+#para hacer el ejecutable, con la carpeta de programa en el disco C poner en cmd
+#pip install pyinstaller
+#cd: ruta del soft
+#pyinstaller -F -w -i icono.ico Aplicacion.py
