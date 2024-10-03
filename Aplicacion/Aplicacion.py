@@ -8,6 +8,8 @@ import os
 import winsound
 from tkinter import ttk
 from PIL import Image, ImageTk
+import pandas as pd
+from openpyxl import load_workbook
 
 def obtener_datos_gui():
     def on_button_click(num):
@@ -26,11 +28,13 @@ def obtener_datos_gui():
     # Crear la ventana
     root = tk.Tk()
     root.title("Registro de Voluntario")
-    root.iconbitmap("../Aplicacion/icono.ico")
+    ruta_icono=os.path.abspath("../SOFT_TIF/Aplicacion/icono.ico")
+    root.iconbitmap(ruta_icono)
     root.geometry("1080x720")  # Tamaño de la ventana
 
     # Cargar la imagen de fondo
-    bg_image = Image.open("Fondo.png")  # Cambia esta ruta por la de tu imagen
+    ruta_fondo=os.path.abspath("../SOFT_TIF/Aplicacion/Fondo.png")
+    bg_image = Image.open(ruta_fondo)  # Cambia esta ruta por la de tu imagen
     bg_photo = ImageTk.PhotoImage(bg_image)
 
     # Crear un canvas para poner la imagen de fondo
@@ -98,13 +102,24 @@ def process_mouse_event(event,x,y,flags, l):
     clone = cv2.imread(l[2])
     cntr=l[0]
     medidas=l[1]
+    k_resorte=((73.1*(10**9))*(1.81*(10**(-3))))/(8*(8.94**3)*13*(1+(0.5/(8.94**2))))
+    area=1  #en cm2
+    newt_kpn=0.101972
+    kgcm_kpa=98.0665
     cv2.line(clone, (5,50), (250,50), (255,255,255), thickness=2, lineType=cv2.LINE_AA) 
     if event == cv2.EVENT_LBUTTONDOWN:
-            med=str((center[1]/10)*(np.pi/12))
+            med=str((center[1]/10)*(np.pi/24))
             a=str(med[0]+med[1]+med[2]+med[3]+" cm.")
             medidas.append(a)
+            numero_str = ''.join(filter(lambda x: x.isdigit() or x == '.', a))
+            numero_str = numero_str.rstrip('.')
+            cm = float(numero_str)
+            medf=k_resorte*(cm*10**(-2))
+            pkpcm2=(medf*newt_kpn)/area
+            kp=str(round(pkpcm2,2))
+            nw=str(round((pkpcm2*kgcm_kpa),2))
             winsound.Beep(300, 500)
-            cv2.putText(clone, "MEDICION: " + med[0]+med[1]+med[2]+med[3]+" cm.", (10,700), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255,255,255), 1, lineType=cv2.LINE_AA)
+            cv2.putText(clone, "MEDICION: " + a, (10,700), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255,255,255), 1, lineType=cv2.LINE_AA)
     if event == cv2.EVENT_MOUSEWHEEL:
         if flags > 0:
             cv2.putText(clone, "Arriba", (10,32), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 2, cv2.LINE_AA)
@@ -116,14 +131,32 @@ def process_mouse_event(event,x,y,flags, l):
     if _center==[550, 0]:
             st="0,000"
     else:
-            st=str((_center[1]/10)*(np.pi/12))
+            st=str((_center[1]/10)*(np.pi/24))
     cv2.line(clone, (5,cntr[1]), (image_width-5,cntr[1]), (255,255,255), thickness=2, lineType=cv2.LINE_AA)
     clone = draw(clone, _center)
     cv2.putText(clone, "MEDIDA: " + st[0]+st[1]+st[2]+st[3]+" cm.", (10,80), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255,255,255), 1, lineType=cv2.LINE_AA)
     altura=25
     for i in range (len(medidas)):
-            cv2.putText(clone, "MEDIDA "+str(i+1)+": "+ medidas[i][0]+medidas[i][1]+medidas[i][2]+medidas[i][3]+" cm.", (700,altura), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255,255,255), 1, lineType=cv2.LINE_AA)
-            altura+=25
+            a=medidas[i]
+            numero_str = ''.join(filter(lambda x: x.isdigit() or x == '.', a))
+            numero_str = numero_str.rstrip('.')
+            cm = float(numero_str)
+            medf=k_resorte*(cm*10**(-2))
+            pkpcm2=(medf*newt_kpn)/area
+            kp=str(round(pkpcm2,2))
+            nw=str(round((pkpcm2*kgcm_kpa),2))
+            if altura  < 700:
+                cv2.putText(clone, "MEDIDA "+str(i+1)+": "+ medidas[i][0]+medidas[i][1]+medidas[i][2]+medidas[i][3]+" cm.", (700,altura), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
+                cv2.putText(clone, kp + " Kgf/cm2", (700,altura+12), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
+                cv2.putText(clone, nw + " kPa", (700,altura+24), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
+                altura+=36
+            else:
+                cv2.putText(clone, "MEDIDA "+str(i+1)+": "+ medidas[i][0]+medidas[i][1]+medidas[i][2]+medidas[i][3]+" cm.", (900,altura-700), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
+                cv2.putText(clone, kp + " Kgf/cm2", (900,altura+12-700), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
+                cv2.putText(clone, nw + " kPa", (900,altura+24-700), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
+                altura+=36    
+            
+            
     cv2.imshow('DOLORIMETRO', clone) 
 
 
@@ -137,6 +170,12 @@ def process_mouse_event(event,x,y,flags, l):
 
 nombre_voluntario, button_number, otro = obtener_datos_gui()
 optn=["Occipucio", "Trapecio", "Supraespinoso", "Glúteo", "Trocánter mayor", "Cervical inferior", "Segunda costilla", "Epicóndilo lateral", "Rodilla"]
+k_resorte=((73.1*(10**9))*(1.81*(10**(-3))))/(8*(8.94**3)*13*(1+(0.5/(8.94**2))))
+medidas_newton=[]
+medidas_kp=[]
+area=1  #en cm2
+newt_kpn=0.101972
+kgcm_kpa=98.0665
 
 if nombre_voluntario is not None:
     if nombre_voluntario:
@@ -153,8 +192,7 @@ if nombre_voluntario is not None:
          lugar=optn[button_number-1]
 
     # Definir la ruta de la carpeta "Medidas" relativa al directorio actual del script
-    carpeta_destino = os.path.join(os.getcwd(), "Medidas")
-    carpeta_destino=carpeta_destino[:-18]+"Medidas"
+    carpeta_destino = os.path.abspath("../SOFT_TIF/Medidas")
 
     # Asegurarse de que la carpeta exista, si no, crearla
     if not os.path.exists(carpeta_destino):
@@ -162,7 +200,7 @@ if nombre_voluntario is not None:
 
     # Combinar la ruta de la carpeta con el nombre del archivo
     nombre_archivo = os.path.join(carpeta_destino, nombre_archivo)
-    ruta_imagen = os.path.join(os.getcwd(), "im.png")
+    ruta_imagen = os.path.abspath("../SOFT_TIF/Aplicacion/im.png")
     image_height = 720 #480
     image_width = 1080 #640
     center = [550,0]
@@ -172,6 +210,16 @@ if nombre_voluntario is not None:
     a=[]
     cv2.setMouseCallback('DOLORIMETRO', process_mouse_event, param=[center,a,ruta_imagen])
     cv2.waitKey(0)
+    
+    for i in a:
+        numero_str = ''.join(filter(lambda x: x.isdigit() or x == '.', i))
+        numero_str = numero_str.rstrip('.')
+        cm = float(numero_str)
+        medf=k_resorte*(cm*10**(-2))
+        pkpcm2=(medf*newt_kpn)/area
+        medidas_kp.append(round(pkpcm2,2))
+        medidas_newton.append(round((pkpcm2*kgcm_kpa),2))
+  
     with open(nombre_archivo, 'w') as file:
         file.write(f"Voluntario: {nombre_voluntario}\n")
         file.write(f"Fecha y Hora: {fecha_hora}\n")
@@ -180,8 +228,60 @@ if nombre_voluntario is not None:
         else:
              file.write("Lugar de Medicion: "+lugar+"\n\n")
         for i in range(len(a)):
-            file.write("MEDIDA "+str(i+1)+":  "+a[i]+"\n")
-        
+            file.write("MEDIDA "+str(i+1)+":  "+str(medidas_kp[i])+" Kgf/cm2   "+str(medidas_newton[i])+" kPa  "+"\n")
+    
+    # Ruta del archivo Excel que queremos actualizar
+    archivo_excel = os.path.join(carpeta_destino,"mediciones_voluntarios.xlsx")
+
+    # Verifica si el archivo Excel ya existe
+    if os.path.exists(archivo_excel):
+        try:
+            # Si el archivo existe, cargar el contenido
+            df = pd.read_excel(archivo_excel)
+        except Exception as e:
+            print("Error al leer el archivo Excel:", e)
+    else:
+        # Crear un nuevo DataFrame si el archivo no existe
+        df = pd.DataFrame(columns=["Voluntario", "Fecha y Hora", "Lugar de Medición", "Mediciones Kgf/cm2", "Mediciones kPa"])
+
+    # Crear una fila con el nombre, la fecha, el lugar y una medida inicial vacía
+    nueva_fila = {
+        "Voluntario": nombre_voluntario,
+        "Fecha y Hora": fecha_hora,
+        "Lugar de Medición": otro if button_number == 0 else lugar,
+        "Mediciones Kgf/cm2": "MEDIDAS(Kgf/cm2)",  
+        "Mediciones kPa": "MEDIDAS (kPa)"  
+    }
+
+    # Agregar la fila inicial al DataFrame
+    df = pd.concat([df, pd.DataFrame([nueva_fila])], ignore_index=True)
+
+    # Agregar cada medición como una nueva fila
+    for i in range(len(a)):
+        medicion_fila = {
+            "Voluntario": None,  # Dejar vacío para que se copie de la fila anterior
+            "Fecha y Hora": None,  # Dejar vacío para que se copie de la fila anterior
+            "Lugar de Medición": None,  # Dejar vacío para que se copie de la fila anterior
+            "Mediciones Kgf/cm2": medidas_kp[i],  
+            "Mediciones kPa": medidas_newton[i]  
+        }
+        df = pd.concat([df, pd.DataFrame([medicion_fila])], ignore_index=True)
+
+    # Guardar el DataFrame en el archivo Excel
+    try:
+        df.to_excel(archivo_excel, index=False, engine='openpyxl')
+
+        # Ajustar el ancho de las columnas a un número fijo (ej. 25)
+        workbook = load_workbook(archivo_excel)
+        sheet = workbook.active
+
+        for column in sheet.columns:
+            sheet.column_dimensions[column[0].column_letter].width = 25  # Ajustar a un ancho fijo
+
+        workbook.save(archivo_excel)  # Guardar los cambios en el archivo Excel
+        print(f"Archivo Excel actualizado y guardado exitosamente en: {archivo_excel}")
+    except Exception as e:
+        print(f"Error al guardar el archivo Excel: {e}")
     cv2.destroyAllWindows()
 
 else:

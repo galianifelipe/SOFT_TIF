@@ -1,0 +1,6 @@
+Voluntario: prueba 3
+Fecha y Hora: 2024-10-03_01-38-52
+Lugar de Medicion: Cervical inferior
+
+MEDIDA 1:  0.23 Kgf/cm2   23.0 kPa  
+MEDIDA 2:  17.0 Kgf/cm2   1666.84 kPa  
