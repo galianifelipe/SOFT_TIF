@@ -1,0 +1,7 @@
+Voluntario: aa
+Fecha y Hora: 2024-09-10_12-35-09
+Lugar de Medicion: Trapecio
+
+MEDIDA 1:  4.97 cm.
+MEDIDA 2:  4.97 cm.
+MEDIDA 3:  4.97 cm.
