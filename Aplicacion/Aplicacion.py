@@ -136,6 +136,8 @@ def process_mouse_event(event,x,y,flags, l):
     clone = draw(clone, _center)
     cv2.putText(clone, "MEDIDA: " + st[0]+st[1]+st[2]+st[3]+" cm.", (10,80), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255,255,255), 1, lineType=cv2.LINE_AA)
     altura=25
+    alt=25
+    al=25
     for i in range (len(medidas)):
             a=medidas[i]
             numero_str = ''.join(filter(lambda x: x.isdigit() or x == '.', a))
@@ -146,15 +148,20 @@ def process_mouse_event(event,x,y,flags, l):
             kp=str(round(pkpcm2,2))
             nw=str(round((pkpcm2*kgcm_kpa),2))
             if altura  < 700:
-                cv2.putText(clone, "MEDIDA "+str(i+1)+": "+ medidas[i][0]+medidas[i][1]+medidas[i][2]+medidas[i][3]+" cm.", (700,altura), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
-                cv2.putText(clone, kp + " Kgf/cm2", (700,altura+12), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
-                cv2.putText(clone, nw + " kPa", (700,altura+24), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
+                cv2.putText(clone, "MEDIDA "+str(i+1)+": "+ medidas[i][0]+medidas[i][1]+medidas[i][2]+medidas[i][3]+" cm.", (650,altura), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
+                cv2.putText(clone, kp + " Kgf/cm2", (650,altura+12), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
+                cv2.putText(clone, nw + " kPa", (650,altura+24), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
                 altura+=36
+            elif alt < 700:
+                cv2.putText(clone, "MEDIDA "+str(i+1)+": "+ medidas[i][0]+medidas[i][1]+medidas[i][2]+medidas[i][3]+" cm.", (800,alt), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
+                cv2.putText(clone, kp + " Kgf/cm2", (800,alt+12), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
+                cv2.putText(clone, nw + " kPa", (800,alt+24), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
+                alt+=36    
             else:
-                cv2.putText(clone, "MEDIDA "+str(i+1)+": "+ medidas[i][0]+medidas[i][1]+medidas[i][2]+medidas[i][3]+" cm.", (900,altura-700), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
-                cv2.putText(clone, kp + " Kgf/cm2", (900,altura+12-700), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
-                cv2.putText(clone, nw + " kPa", (900,altura+24-700), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
-                altura+=36    
+                cv2.putText(clone, "MEDIDA "+str(i+1)+": "+ medidas[i][0]+medidas[i][1]+medidas[i][2]+medidas[i][3]+" cm.", (960,al), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
+                cv2.putText(clone, kp + " Kgf/cm2", (960,al+12), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
+                cv2.putText(clone, nw + " kPa", (960,al+24), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255,255,255), 1, lineType=cv2.LINE_AA)
+                al+=36 
             
             
     cv2.imshow('DOLORIMETRO', clone) 

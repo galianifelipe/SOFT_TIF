@@ -1,0 +1,51 @@
+Voluntario: prueba app 2
+Fecha y Hora: 2024-10-03_14-07-44
+Lugar de Medicion: Occipucio
+
+MEDIDA 1:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 2:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 3:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 4:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 5:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 6:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 7:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 8:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 9:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 10:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 11:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 12:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 13:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 14:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 15:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 16:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 17:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 18:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 19:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 20:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 21:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 22:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 23:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 24:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 25:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 26:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 27:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 28:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 29:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 30:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 31:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 32:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 33:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 34:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 35:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 36:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 37:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 38:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 39:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 40:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 41:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 42:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 43:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 44:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 45:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 46:  0.94 Kgf/cm2   92.01 kPa  
+MEDIDA 47:  0.94 Kgf/cm2   92.01 kPa  
