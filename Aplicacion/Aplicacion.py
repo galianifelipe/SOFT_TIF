@@ -28,12 +28,12 @@ def obtener_datos_gui():
     # Crear la ventana
     root = tk.Tk()
     root.title("Registro de Voluntario")
-    ruta_icono=os.path.abspath("../SOFT_TIF/Aplicacion/icono.ico")
+    ruta_icono=os.path.abspath("../Aplicacion/icono.ico")
     root.iconbitmap(ruta_icono)
     root.geometry("1080x720")  # Tamaño de la ventana
 
     # Cargar la imagen de fondo
-    ruta_fondo=os.path.abspath("../SOFT_TIF/Aplicacion/Fondo.png")
+    ruta_fondo=os.path.abspath("../Aplicacion/Fondo.png")
     bg_image = Image.open(ruta_fondo)  # Cambia esta ruta por la de tu imagen
     bg_photo = ImageTk.PhotoImage(bg_image)
 
@@ -192,7 +192,7 @@ if nombre_voluntario is not None:
          lugar=optn[button_number-1]
 
     # Definir la ruta de la carpeta "Medidas" relativa al directorio actual del script
-    carpeta_destino = os.path.abspath("../SOFT_TIF/Medidas")
+    carpeta_destino = os.path.abspath("../Medidas")
 
     # Asegurarse de que la carpeta exista, si no, crearla
     if not os.path.exists(carpeta_destino):
@@ -200,7 +200,7 @@ if nombre_voluntario is not None:
 
     # Combinar la ruta de la carpeta con el nombre del archivo
     nombre_archivo = os.path.join(carpeta_destino, nombre_archivo)
-    ruta_imagen = os.path.abspath("../SOFT_TIF/Aplicacion/im.png")
+    ruta_imagen = os.path.abspath("../Aplicacion/im.png")
     image_height = 720 #480
     image_width = 1080 #640
     center = [550,0]

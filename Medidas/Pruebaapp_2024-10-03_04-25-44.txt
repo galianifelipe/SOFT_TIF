@@ -1,0 +1,10 @@
+Voluntario: Pruebaapp
+Fecha y Hora: 2024-10-03_04-25-44
+Lugar de Medicion: otroapp
+
+MEDIDA 1:  2.11 Kgf/cm2   207.03 kPa  
+MEDIDA 2:  4.01 Kgf/cm2   392.82 kPa  
+MEDIDA 3:  6.13 Kgf/cm2   601.62 kPa  
+MEDIDA 4:  8.5 Kgf/cm2   833.42 kPa  
+MEDIDA 5:  10.63 Kgf/cm2   1042.22 kPa  
+MEDIDA 6:  12.04 Kgf/cm2   1180.24 kPa  
