@@ -1,0 +1,7 @@
+Voluntario: prueba
+Fecha y Hora: 2024-12-12_01-15-39
+Lugar de Medicion: 
+
+MEDIDA 1:  1.17 Kgf/cm2   115.02 kPa  
+MEDIDA 2:  3.07 Kgf/cm2   300.81 kPa  
+MEDIDA 3:  4.71 Kgf/cm2   461.83 kPa  
