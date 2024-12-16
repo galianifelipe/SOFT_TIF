@@ -1,0 +1,42 @@
+Voluntario: prueba 7
+Fecha y Hora: 2024-10-03_13-44-15
+Lugar de Medicion: Trocánter mayor
+
+MEDIDA 1:  1.88 Kgf/cm2   184.02 kPa  
+MEDIDA 2:  3.77 Kgf/cm2   369.82 kPa  
+MEDIDA 3:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 4:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 5:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 6:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 7:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 8:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 9:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 10:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 11:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 12:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 13:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 14:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 15:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 16:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 17:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 18:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 19:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 20:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 21:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 22:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 23:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 24:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 25:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 26:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 27:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 28:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 29:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 30:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 31:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 32:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 33:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 34:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 35:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 36:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 37:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 38:  5.43 Kgf/cm2   532.61 kPa  

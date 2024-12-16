@@ -1,0 +1,18 @@
+Voluntario: A
+Fecha y Hora: 2024-10-19_18-51-48
+Lugar de Medicion: Segunda costilla
+
+MEDIDA 1:  2.35 Kgf/cm2   230.03 kPa  
+MEDIDA 2:  2.35 Kgf/cm2   230.03 kPa  
+MEDIDA 3:  3.54 Kgf/cm2   346.82 kPa  
+MEDIDA 4:  4.94 Kgf/cm2   484.83 kPa  
+MEDIDA 5:  3.54 Kgf/cm2   346.82 kPa  
+MEDIDA 6:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 7:  7.07 Kgf/cm2   693.63 kPa  
+MEDIDA 8:  5.18 Kgf/cm2   507.84 kPa  
+MEDIDA 9:  4.47 Kgf/cm2   438.83 kPa  
+MEDIDA 10:  3.07 Kgf/cm2   300.81 kPa  
+MEDIDA 11:  4.71 Kgf/cm2   461.83 kPa  
+MEDIDA 12:  6.37 Kgf/cm2   624.62 kPa  
+MEDIDA 13:  8.26 Kgf/cm2   810.42 kPa  
+MEDIDA 14:  7.07 Kgf/cm2   693.63 kPa  
