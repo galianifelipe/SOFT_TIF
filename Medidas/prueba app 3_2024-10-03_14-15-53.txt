@@ -1,0 +1,39 @@
+Voluntario: prueba app 3
+Fecha y Hora: 2024-10-03_14-15-53
+Lugar de Medicion: Epicóndilo lateral
+
+MEDIDA 1:  2.11 Kgf/cm2   207.03 kPa  
+MEDIDA 2:  2.35 Kgf/cm2   230.03 kPa  
+MEDIDA 3:  2.58 Kgf/cm2   253.03 kPa  
+MEDIDA 4:  2.83 Kgf/cm2   277.81 kPa  
+MEDIDA 5:  3.07 Kgf/cm2   300.81 kPa  
+MEDIDA 6:  3.54 Kgf/cm2   346.82 kPa  
+MEDIDA 7:  3.77 Kgf/cm2   369.82 kPa  
+MEDIDA 8:  4.01 Kgf/cm2   392.82 kPa  
+MEDIDA 9:  4.24 Kgf/cm2   415.83 kPa  
+MEDIDA 10:  4.47 Kgf/cm2   438.83 kPa  
+MEDIDA 11:  4.71 Kgf/cm2   461.83 kPa  
+MEDIDA 12:  4.94 Kgf/cm2   484.83 kPa  
+MEDIDA 13:  5.18 Kgf/cm2   507.84 kPa  
+MEDIDA 14:  5.43 Kgf/cm2   532.61 kPa  
+MEDIDA 15:  5.67 Kgf/cm2   555.61 kPa  
+MEDIDA 16:  5.9 Kgf/cm2   578.62 kPa  
+MEDIDA 17:  6.13 Kgf/cm2   601.62 kPa  
+MEDIDA 18:  6.37 Kgf/cm2   624.62 kPa  
+MEDIDA 19:  6.6 Kgf/cm2   647.63 kPa  
+MEDIDA 20:  6.84 Kgf/cm2   670.63 kPa  
+MEDIDA 21:  7.07 Kgf/cm2   693.63 kPa  
+MEDIDA 22:  7.31 Kgf/cm2   716.64 kPa  
+MEDIDA 23:  7.54 Kgf/cm2   739.64 kPa  
+MEDIDA 24:  7.78 Kgf/cm2   762.64 kPa  
+MEDIDA 25:  8.03 Kgf/cm2   787.41 kPa  
+MEDIDA 26:  8.26 Kgf/cm2   810.42 kPa  
+MEDIDA 27:  8.5 Kgf/cm2   833.42 kPa  
+MEDIDA 28:  8.73 Kgf/cm2   856.42 kPa  
+MEDIDA 29:  8.97 Kgf/cm2   879.43 kPa  
+MEDIDA 30:  9.2 Kgf/cm2   902.43 kPa  
+MEDIDA 31:  9.44 Kgf/cm2   925.43 kPa  
+MEDIDA 32:  9.67 Kgf/cm2   948.44 kPa  
+MEDIDA 33:  9.91 Kgf/cm2   971.44 kPa  
+MEDIDA 34:  10.14 Kgf/cm2   994.44 kPa  
+MEDIDA 35:  10.38 Kgf/cm2   1017.45 kPa  
