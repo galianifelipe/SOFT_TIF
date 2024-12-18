@@ -1,8 +1,0 @@
-Voluntario: A
-Fecha y Hora: 2024-09-26_18-29-41
-Lugar de Medicion: Glúteo
-
-MEDIDA 1:  4.97 cm.
-MEDIDA 2:  6.28 cm.
-MEDIDA 3:  7.06 cm.
-MEDIDA 4:  8.37 cm.

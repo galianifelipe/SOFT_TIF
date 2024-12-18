@@ -1,8 +1,0 @@
-Voluntario: prueba 6
-Fecha y Hora: 2024-10-03_01-46-01
-Lugar de Medicion: Epicóndilo lateral
-
-MEDIDA 1:  1.88 Kgf/cm2   184.02 kPa  
-MEDIDA 2:  4.01 Kgf/cm2   392.82 kPa  
-MEDIDA 3:  6.37 Kgf/cm2   624.62 kPa  
-MEDIDA 4:  8.5 Kgf/cm2   833.42 kPa  
