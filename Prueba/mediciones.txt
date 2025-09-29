@@ -1,4 +1,0 @@
-Voluntario: cc, Punto: Otro
-Voluntario: aaa, Punto: Otro
-Voluntario: aaa, Punto: Otro, Info: El punto esta en el brazo
-Voluntario: aaa, Punto: Otro, Info: aaaa

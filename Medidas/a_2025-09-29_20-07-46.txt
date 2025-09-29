@@ -1,6 +1,0 @@
-Voluntario: a
-Fecha y Hora: 2025-09-29_20-07-46
-Lugar de Medicion: Epicóndilo lateral
-
-MEDIDA 1:  1.18 Kgf/cm2   115.72 kPa  
-MEDIDA 2:  2.36 Kgf/cm2   231.62 kPa  

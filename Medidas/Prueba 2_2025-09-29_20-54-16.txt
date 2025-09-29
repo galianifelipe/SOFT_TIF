@@ -1,0 +1,7 @@
+Voluntario: Prueba 2
+Fecha y Hora: 2025-09-29_20-54-16
+Lugar de Medicion: 
+
+MEDIDA 1:  2.0 Kgf/cm2   196.16 kPa  
+MEDIDA 2:  1.88 Kgf/cm2   183.89 kPa  
+MEDIDA 3:  2.25 Kgf/cm2   220.71 kPa  

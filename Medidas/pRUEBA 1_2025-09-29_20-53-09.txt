@@ -1,0 +1,11 @@
+Voluntario: pRUEBA 1
+Fecha y Hora: 2025-09-29_20-53-09
+Lugar de Medicion: Epicóndilo lateral
+
+MEDIDA 1:  4.72 Kgf/cm2   463.25 kPa  
+MEDIDA 2:  4.49 Kgf/cm2   440.07 kPa  
+MEDIDA 3:  4.01 Kgf/cm2   393.71 kPa  
+MEDIDA 4:  4.96 Kgf/cm2   486.43 kPa  
+MEDIDA 5:  4.72 Kgf/cm2   463.25 kPa  
+MEDIDA 6:  4.96 Kgf/cm2   486.43 kPa  
+MEDIDA 7:  4.49 Kgf/cm2   440.07 kPa  
