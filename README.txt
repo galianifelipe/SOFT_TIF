@@ -50,3 +50,11 @@ Notas operativas y buenas prácticas
 - Si la calibración falla o no hay mediciones, se conserva el valor previo en calibracion.txt.
 
 
+Creditos
+----------------------------------
+Software realizado como TIF en el año 2025 por el grupo conformado por:
+- Galiani Felipe
+- Liñan Juan
+- Maldonado Nestor
+- Beuchamps Eric
+Ante cualquier consulta comunicarse a felipe.galiani@ingenieria.uner.edu.ar
