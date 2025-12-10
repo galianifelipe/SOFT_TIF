@@ -16,7 +16,7 @@ Requisitos
 Calibración (resumen técnico)
 -----------------------------
 - Si no existe calibracion.txt se usa un valor por defecto calculado en el código:
-  $$k_{def} = \frac{(73.1\times10^{9})(1.81\times10^{-3})}{8(8.94^{3})\cdot 13 \left(1+\frac{0.5}{8.94^{2}}\right)}$$
+  k = (73.1*10^9*(1.81*10^-3))/(8*(8.94^3)*13*(1+(0.5/8.94^2)))
   (cálculo implementado en [`Aplicacion.cargar_k`](c:\SOFT_TIF\Aplicacion\Aplicacion.py)).
 
 - Procedimiento de calibración dentro de la GUI:
@@ -31,7 +31,7 @@ Calibración (resumen técnico)
     $$\bar{x} = \text{promedio de desplazamientos (m)}$$
   - La fuerza usada es 2 kgf ≈ 2 * 9.81 N.
   - Nueva constante:
-    $$k = \frac{F}{\bar{x}}$$
+    k = F/x
   - El nuevo k se escribe en calibracion.txt (función [`Aplicacion.guardar_k`](c:\SOFT_TIF\Aplicacion\Aplicacion.py)).
 
 PARA REINICIAR LA CALIBRACION BORRAR calibracion.txt EN ESE CASO SE UTILIZARA LA K PROPIA DEL PROGRAMA Y SE DEBERA RECALIBRAR.
